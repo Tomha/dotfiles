@@ -42,12 +42,18 @@ bspc config focused_border_color 	"#f96969"
 # Focused Window on Unfocused Monitor
 bspc config active_border_color		"#4d2d2d"
 
+# Preselected Window
+bspc config presel_feedback_color	"#f99999"
+
 #==============================================================#
 #                            Mouse                             #
 #==============================================================#
 
 # Focus Window on Click
 bspc config click_to_focus		button1
+
+bspc config pointer_action1		move
+bspc config pointer_action2		resize_corner
 
 #==============================================================#
 #                        Monacle Mode                          #
