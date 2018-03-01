@@ -1,0 +1,67 @@
+#! /bin/sh
+
+sxhkd &
+feh --bg-fill $HOME/.config/bspwm/wallpaper &
+$HOME/.config/polybar/launch.sh
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+#==============================================================#
+#                           General                            #
+#==============================================================#
+
+# Split Ratio
+bspc config split_ratio			0.5
+
+#==============================================================#
+#                           Spacing                            #
+#==============================================================#
+
+# Border Width
+bspc config border_width		4
+
+# Space Around/Between Windows
+bspc config window_gap			8
+
+# Space Around Whole Screen
+bspc config top_padding			28
+bspc config right_padding		0
+bspc config bottom_padding		0
+bspc config left_padding		0
+
+#==============================================================#
+#                           Colours                            #
+#==============================================================#
+
+# Unfocused Window
+bspc config normal_border_color		"#3a3a4a"
+
+# Focused Window on Focused Monitor
+bspc config focused_border_color 	"#f96969"
+
+# Focused Window on Unfocused Monitor
+bspc config active_border_color		"#4d2d2d"
+
+#==============================================================#
+#                            Mouse                             #
+#==============================================================#
+
+# Focus Window on Click
+bspc config click_to_focus		button1
+
+#==============================================================#
+#                        Monacle Mode                          #
+#                   (Full screen apps only)                    #
+#==============================================================#
+
+# Use Monacle Mode when Only One Window
+bspc config single_monocle		true
+
+# No Window Border on Monacle Desktop
+bspc config borderless_monocle		false
+
+# No Gaps on Monacle Desktops
+bspc config gapless_monocle		false
+
+# No Padding on Monacle Desktops
+bspc config paddingless_monocle		false
