@@ -1,0 +1,10 @@
+label-font = 1
+label-margin = 0
+label-padding = 1
+label-background = ${colours.bg-primary}
+label-foreground = ${colours.fg-primary}
+
+format-margin = 0
+format-padding = 1
+format-background = ${colours.fg-primary}
+format-foreground = ${colours.bg-primary}

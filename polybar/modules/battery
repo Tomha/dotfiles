@@ -1,0 +1,50 @@
+[module/battery]
+type = internal/battery
+full-at = 99
+
+; Find with `ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = ADP1
+
+; Manually poll if an inotify event hasnt been received in n seconds
+; Disable with 0
+poll-interval = 0
+
+label-charging = %percentage:2:3%%
+label-charging-font = 1
+label-charging-margin = 0
+label-charging-padding = 1
+label-charging-background = ${colours.bg-primary}
+label-charging-foreground = ${colours.fg-primary}
+
+format-charging =  <label-charging>
+format-charging-margin = 0
+format-charging-padding = 1
+format-charging-background = ${colours.fg-primary}
+format-charging-foreground = ${colours.bg-primary}
+
+label-discharging = %percentage:2:3%%
+label-discharging-font = 1
+label-discharging-margin = 0
+label-discharging-padding = 1
+label-discharging-background = ${colours.bg-primary}
+label-discharging-foreground = ${colours.fg-primary}
+
+format-discharging =  <label-discharging>
+format-discharging-margin = 0
+format-discharging-padding = 1
+format-discharging-background = ${colours.fg-primary}
+format-discharging-foreground = ${colours.bg-primary}
+
+label-full = %percentage:2:3%%
+label-full-font = 1
+label-full-margin = 0
+label-full-padding = 1
+label-full-background = ${colours.bg-primary}
+label-full-foreground = ${colours.fg-primary}
+
+format-full =  100%
+format-full-margin = 0
+format-full-padding = 1
+format-full-background = ${colours.fg-primary}
+format-full-foreground = ${colours.bg-primary}

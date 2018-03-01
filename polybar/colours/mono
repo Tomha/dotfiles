@@ -1,0 +1,7 @@
+fg-primary = #ffffff
+fg-secondary #bbbbbb
+fg-highlight = #666666
+
+bg-primary = #222222
+bg-secondary = #111111
+bg-highlight = 5a6a6a

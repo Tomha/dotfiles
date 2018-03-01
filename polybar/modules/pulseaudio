@@ -1,0 +1,20 @@
+[module/pulseaudio]
+type = internal/pulseaudio
+
+
+
+
+;label-muted-prefix = ""
+;label-volume-prefix = ""
+
+;format-muted-prefix-background = ${colours.bg-primary}
+;format-volume-prefix-background = ${colours.bg-primary}
+
+;format-muted-background = ${colours.fg-primary}
+;format-volume-background = ${colours.fg-primary}
+
+;format-muted-foreground = ${colours.bg-primary}
+;format-volume-foreground = ${colours.bg-primary}
+
+;format-muted = " <label-muted>"
+;format-volume = " <label-volume>"

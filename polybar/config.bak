@@ -1,0 +1,139 @@
+;==============================;
+;          Variables           ;
+;==============================;
+
+[colours]
+include-file = /home/tom/.config/polybar/colours/base
+include-file = /home/tom/.config/polybar/colours/sunset
+
+;==============================;
+;            Global            ;
+;==============================;
+
+[global/wm]i
+margin-bottom = 0
+margin-top = 0
+
+;==============================;
+;             Bars             ;
+;==============================;
+
+[bar/default]
+
+; Use first screen found
+monitor =
+monitor-fallback =
+
+; Dont require monitor to be connected
+monitor-strict = false
+
+; Dont display on bottom of screen
+bottom = false
+
+; Center It
+fixed-center = true
+
+; Size
+width = 100%
+height = 32px
+
+; Offset
+offset-x = 0
+offset-y = 0
+
+; Colours
+background = ${colours.transparent} 
+foreground = ${colours.fg-primary}
+
+; Corner Radius (top,bottom)
+radius-top = 0.0
+radius-bottom = 0.0
+
+; Under/overline pixel size and argb colour
+overline-size = 0
+overline-color = {colours.white}
+
+underline-size = 0
+unerline-color = ${colours.white}
+
+; Borders (Can define border-top/right/bottom/left)
+border-size = 0
+border-color = colours.black
+
+; Side padding
+padding-left = 0
+padding-right = 0
+
+; Opacity
+dim-value = 1.0
+
+; Locale
+locale = en_NZ.UTF-8
+
+; Font
+font-0 = SourceCodePro-Medium:size=11
+
+; Position (left, center, or right)
+tray-position = right
+
+; Shift bar contents when tray canges
+tray-detached = false
+
+; Max tray icon size
+tray-maxsize = 24
+
+; Dont enable pseudo-transparency
+tray-transparent = false
+
+; Tray background colour
+tray-background = colours.black
+
+; Tray offset (pixel or percentage)
+tray-offset-x = 0
+tray-offset-y = 0
+
+; X-axis padding for tray icons
+tray-padding = 4
+
+; Scale for tray clients
+tray-scale = 1.0
+
+; Prevent bar being drawn over fullscreen windows
+wm-restack = 
+
+; Add Modules
+modules-left = 
+modules-center = time dash title
+modules-right = volume cpu memory
+
+[module/date]
+type = internal/date
+interval = 1.0
+
+date = %Y-%m-%d%
+date-alt = %A, %d %B %Y
+
+[module/time]
+type = internal/date
+interval = 1.0
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+[module/cpu]
+type = internal/cpu
+interval = 1.0
+
+[module/memory]
+type = internal/memory
+interval = 1.0
+
+[module/title]
+type = internal/xwindow
+
+[module/dash]
+type = custom/text
+content = " - "
+
+[module/pulseaudio]
+include-file = /home/tom/.config/polybar/modules/pulseaudio

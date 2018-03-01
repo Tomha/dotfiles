@@ -1,0 +1,20 @@
+[module/datetime]
+type = internal/date
+
+interval = 1.0
+
+date = %d/%M/%y
+time = %H:%M%p
+
+label = %time% %date%
+label-font = 3
+label-margin = 0
+label-padding = 0
+label-background = ${colours.bg-primary}
+label-foreground = ${colours.fg-primary}
+
+format =  <label>
+format-margin = 0
+format-padding = 0
+format-background = ${colours.bg-primary}
+format-foreground = ${colours.fg-primary}

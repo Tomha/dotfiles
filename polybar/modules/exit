@@ -1,0 +1,10 @@
+[module/exit]
+type = custom/text
+
+content = 
+content-margin = 
+content-padding = 1
+content-background = ${colours.bg-primary}
+content-foreground = ${colours.fg-primary}
+
+click-left = bspc node -c & 

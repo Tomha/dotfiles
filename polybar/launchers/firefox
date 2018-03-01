@@ -1,0 +1,10 @@
+[module/firefox]
+type = custom/text
+
+content = 
+content-margin = 0
+content-padding = 1
+content-background = ${colours.fg-primary}
+content-foreground = ${colours.bg-primary}
+
+click-left = firefox --browser &

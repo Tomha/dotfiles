@@ -1,0 +1,4 @@
+format-margin = 0
+format-padding = 1
+format-background = ${colours.fg-primary}
+format-foreground = ${colours.bg-primary}

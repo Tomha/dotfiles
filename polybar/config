@@ -1,0 +1,158 @@
+;==============================;
+;          Variables           ;
+;==============================;
+
+[colours]
+include-file = /home/tom/.config/polybar/colours/base
+include-file = /home/tom/.config/polybar/colours/mono
+
+;==============================;
+;            Global            ;
+;==============================;
+
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+
+;==============================;
+;             Bars             ;
+;==============================;
+
+[bar/default]
+
+; Use first screen found
+monitor = VGA-1
+;monitor-fallback =
+
+; Dont require monitor to be connected
+monitor-strict = false
+
+; Dont display on bottom of screen
+bottom = false
+
+; Center It
+fixed-center = true
+
+; Size
+width = 100%
+height = 24px
+
+; Offset
+offset-x = 0
+offset-y = 0
+
+; Colours
+background = ${colours.bg-primary} 
+foreground = ${colours.fg-primary}
+
+; Corner Radius (top,bottom)
+radius-top = 0.0
+radius-bottom = 0.0
+
+; Under/overline pixel size and argb colour
+overline-size = 0
+overline-color = {colours.white}
+
+underline-size = 0
+unerline-color = ${colours.white}
+
+; Borders (Can define border-top/right/bottom/left)
+border-size = 0
+border-color = colours.black
+
+; Side padding (spaces)
+padding-left = 1
+padding-right = 1
+
+; Opacity
+dim-value = 1.0
+
+; Locale
+locale = en_NZ.UTF-8
+
+; Font
+font-0 = SourceCodePro-Medium:size=11;3
+font-1 = FontAwesome-Regular:size=11;3
+font-2 = DejavuMono-Regular:size=10;3
+
+; Position (left, center, or right)
+tray-position = right
+
+; Shift bar contents when tray canges
+tray-detached = false
+
+; Max tray icon size
+tray-maxsize = 24
+
+; Enable pseudo-transparency
+tray-transparent = true
+
+; Tray background colour
+tray-background = colours.black
+
+; Tray offset (pixel or percentage)
+tray-offset-x = 0
+tray-offset-y = 0
+
+; X-axis padding for tray icons
+tray-padding = 4
+
+; Scale for tray clients
+tray-scale = 1.0
+
+; Prevent bar being drawn over fullscreen windows
+wm-restack = bspwm 
+
+; Add Modules
+modules-left = firefox lxterminal kate spotify
+modules-center = title exit
+modules-right = icon-clock date space time
+
+;include-file =     ~/.config/polybar/modules/backlight
+include-file =      ~/.config/polybar/modules/cpu
+include-file =      ~/.config/polybar/modules/memory
+;include-file =     ~/.config/polybar/modules/wired-state
+include-file =      ~/.config/polybar/modules/hackspeed
+include-file =      ~/.config/polybar/modules/title
+include-file =      ~/.config/polybar/modules/exit
+
+; Modules - LEFT
+
+; Modules - CENTER
+
+; Modules - RIGHT
+
+[module/icon-clock]
+type = custom/text
+content = 
+content-font = 1
+content-foreground = ${colours.fg-primary}
+content-padding = 1
+
+[module/time]
+type = internal/date
+interval = 1.0
+time = %H:%M%p
+label = %time%
+label-font = 2
+label-foreground = ${colours.fg-primary}
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = %d/%M/%y
+label = %date%
+label-font = 2
+label-foreground = #888888
+
+; Modules - COMMON
+[module/space]
+type = custom/text
+content = " "
+
+; Launchers
+include-file = ~/.config/polybar/launchers/firefox
+include-file = ~/.config/polybar/launchers/lxterminal
+include-file = ~/.config/polybar/launchers/kate
+include-file = ~/.config/polybar/launchers/spotify
+
